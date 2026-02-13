@@ -1,0 +1,8 @@
+{
+  "targetRoles": ["Software Engineer", "Backend Engineer"],
+  "locations": ["New York, NY", "Austin, TX"],
+  "remoteOnly": true,
+  "seniority": "mid",
+  "salaryMinUsd": 120000,
+  "keywords": ["Node.js", "TypeScript", "AWS", "PostgreSQL"]
+}

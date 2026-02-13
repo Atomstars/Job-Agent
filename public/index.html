@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Agent</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Job Search Agent</h1>
+      <p class="subtitle">Plan your daily applications with a profile-driven assistant.</p>
+
+      <section class="card">
+        <h2>Profile</h2>
+        <form id="profile-form">
+          <label>Target roles (comma-separated)
+            <input id="targetRoles" required value="Software Engineer, Backend Engineer" />
+          </label>
+          <label>Locations (comma-separated)
+            <input id="locations" required value="New York, NY, Austin, TX" />
+          </label>
+          <label>Seniority
+            <input id="seniority" value="mid" />
+          </label>
+          <label>Salary minimum (USD)
+            <input id="salaryMinUsd" type="number" min="0" value="120000" />
+          </label>
+          <label>Keywords (comma-separated)
+            <input id="keywords" value="Node.js, TypeScript, AWS, PostgreSQL" />
+          </label>
+          <label class="checkbox">
+            <input id="remoteOnly" type="checkbox" checked />
+            Remote only
+          </label>
+          <button type="submit">Generate Plan</button>
+        </form>
+      </section>
+
+      <section class="card" id="results" hidden>
+        <h2>Generated Plan</h2>
+        <div id="meta"></div>
+        <h3>Boolean Queries</h3>
+        <ul id="queries"></ul>
+        <h3>Search Links</h3>
+        <div id="links"></div>
+        <h3>Daily Plan</h3>
+        <ol id="dailyPlan"></ol>
+      </section>
+
+      <section class="card error" id="error" hidden></section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
