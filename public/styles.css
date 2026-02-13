@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-  max-width: 960px;
+  max-width: 1040px;
   margin: 2rem auto;
   padding: 0 1rem;
 }
@@ -61,6 +61,29 @@ button {
 
 button:hover {
   background: #1d4ed8;
+}
+
+.summary {
+  padding: 0.6rem 0.8rem;
+  border-left: 4px solid #2563eb;
+  background: #eff6ff;
+}
+
+.opportunities {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 0.8rem;
+}
+
+.opportunity-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 0.8rem;
+  background: #fcfcfd;
+}
+
+.opportunity-card h4 {
+  margin: 0 0 0.4rem;
 }
 
 .error {
