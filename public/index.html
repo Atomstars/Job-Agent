@@ -8,8 +8,8 @@
   </head>
   <body>
     <main class="container">
-      <h1>Job Search Assistant Bot</h1>
-      <p class="subtitle">Your personal assistant bot for finding roles by company, role, and location.</p>
+      <h1>Job Search Agent</h1>
+      <p class="subtitle">Plan your daily applications with a profile-driven assistant.</p>
 
       <section class="card">
         <h2>Profile</h2>
@@ -20,9 +20,6 @@
           <label>Locations (comma-separated)
             <input id="locations" required value="New York, NY, Austin, TX" />
           </label>
-          <label>Company watchlist (comma-separated)
-            <input id="companyWatchlist" value="Google, Microsoft, Stripe, Shopify" />
-          </label>
           <label>Seniority
             <input id="seniority" value="mid" />
           </label>
@@ -32,28 +29,17 @@
           <label>Keywords (comma-separated)
             <input id="keywords" value="Node.js, TypeScript, AWS, PostgreSQL" />
           </label>
-          <label>Opportunity cards to generate (5-40)
-            <input id="maxOpportunities" type="number" min="5" max="40" value="16" />
-          </label>
           <label class="checkbox">
             <input id="remoteOnly" type="checkbox" checked />
             Remote only
           </label>
-          <button type="submit">Ask Assistant Bot</button>
+          <button type="submit">Generate Plan</button>
         </form>
       </section>
 
       <section class="card" id="results" hidden>
-        <h2>Assistant Output</h2>
+        <h2>Generated Plan</h2>
         <div id="meta"></div>
-        <p id="summary" class="summary"></p>
-
-        <h3>Company + Role Opportunities</h3>
-        <div id="opportunities" class="opportunities"></div>
-
-        <h3>Bot Tips</h3>
-        <ul id="tips"></ul>
-
         <h3>Boolean Queries</h3>
         <ul id="queries"></ul>
         <h3>Search Links</h3>

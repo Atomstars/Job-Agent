@@ -2,7 +2,6 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 const { createJobSearchPlan } = require('./jobSearchService');
-const { createBotReply } = require('./assistantBotService');
 
 const PORT = Number(process.env.PORT) || 3000;
 const PUBLIC_DIR = path.join(__dirname, '..', 'public');
@@ -80,24 +79,6 @@ const server = http.createServer(async (req, res) => {
         seniority: 'mid',
         salaryMinUsd: 120000,
         keywords: ['Node.js', 'TypeScript', 'AWS', 'PostgreSQL']
-      });
-      return;
-    }
-
-
-    if (req.method === 'POST' && req.url === '/api/bot/assistant') {
-      const body = await parseRequestBody(req);
-      const plan = createJobSearchPlan(body);
-      const botReply = createBotReply({ ...plan.profile, companyWatchlist: body.companyWatchlist, maxOpportunities: body.maxOpportunities });
-      sendJson(res, 200, {
-        profile: plan.profile,
-        generatedAt: plan.generatedAt,
-        summary: botReply.summary,
-        tips: botReply.tips,
-        opportunities: botReply.opportunities,
-        queries: plan.queries,
-        links: plan.links,
-        dailyPlan: plan.dailyPlan
       });
       return;
     }

@@ -1,10 +1,8 @@
 {
   "targetRoles": ["Software Engineer", "Backend Engineer"],
   "locations": ["New York, NY", "Austin, TX"],
-  "companyWatchlist": ["Google", "Microsoft", "Stripe", "Shopify"],
   "remoteOnly": true,
   "seniority": "mid",
   "salaryMinUsd": 120000,
-  "maxOpportunities": 16,
   "keywords": ["Node.js", "TypeScript", "AWS", "PostgreSQL"]
 }
