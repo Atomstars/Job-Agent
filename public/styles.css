@@ -1,0 +1,100 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: #111827;
+  background: #f3f4f6;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  max-width: 1040px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.subtitle {
+  color: #4b5563;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  margin-top: 1rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+form {
+  display: grid;
+  gap: 0.8rem;
+}
+
+label {
+  display: grid;
+  gap: 0.3rem;
+  font-size: 0.95rem;
+}
+
+input {
+  padding: 0.55rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+button {
+  width: fit-content;
+  border: none;
+  background: #2563eb;
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+.summary {
+  padding: 0.6rem 0.8rem;
+  border-left: 4px solid #2563eb;
+  background: #eff6ff;
+}
+
+.opportunities {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 0.8rem;
+}
+
+.opportunity-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 0.8rem;
+  background: #fcfcfd;
+}
+
+.opportunity-card h4 {
+  margin: 0 0 0.4rem;
+}
+
+.error {
+  border-left: 5px solid #dc2626;
+  color: #991b1b;
+}
+
+#links h4 {
+  margin-bottom: 0.3rem;
+}
+
+#links ul {
+  margin-top: 0;
+}
